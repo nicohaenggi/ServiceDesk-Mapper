@@ -1,0 +1,46 @@
+.code-output {
+  margin-bottom: 10px;
+
+  h4 {
+    margin-top: 20px;
+  }
+
+  .block {
+    background-color: #efefef;
+    padding: 20px;
+    white-space: pre-wrap;
+  }
+
+  .fields {
+    font-weight: 400;
+    padding-bottom: 1px;
+    font-size: 14px;
+  }
+
+  .warning {
+    background-color: #ff6868;
+    color: white;
+    font-weight: 700;
+
+  }
+
+  .info {
+    background-color: #ffb15e;
+    color: white;
+    font-weight: 700;
+  }
+
+  .clipboard {
+  	background-color:#3ca7ec;
+  	display:inline-block;
+  	cursor:pointer;
+  	color:#ffffff;
+  	padding:7px 20px;
+  	text-decoration:none;
+    text-align: center;
+  }
+  .clipboard:hover {
+  	background-color:#1977b5;
+  }
+
+}

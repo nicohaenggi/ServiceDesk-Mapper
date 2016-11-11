@@ -1,0 +1,69 @@
+Field Name,DEV,INTG,PROD
+CUID Document,customfield_13202,customfield_99999,customfield_77777
+BI Business Domain,customfield_13203,customfield_99998,customfield_77776
+Emergency,customfield_13301,customfield_99997,customfield_77775
+Transport Destination,customfield_13404,customfield_99996,customfield_77774
+BW / Portal Destination,customfield_13805,customfield_99995,customfield_77773
+Storage Path,customfield_13302,customfield_99994,customfield_77772
+Transport Origin,customfield_13405,customfield_99993,customfield_77771
+Person to Authorize,customfield_13500,customfield_99992,customfield_77770
+Permission Request Type,customfield_13600,customfield_99991,customfield_77769
+BI Available Systems,customfield_13601,customfield_99990,customfield_77768
+Market Unit,customfield_13603,customfield_99989,customfield_77767
+OU Risk Management,customfield_13604,customfield_99988,customfield_77766
+Enduser Reporting Role - Risk Management,customfield_13605,customfield_99987,customfield_77765
+Transport Number,customfield_13606,customfield_99986,customfield_77764
+BI Solution,customfield_13607,customfield_99985,customfield_77763
+Enduser Reporting Role - Finance,customfield_13608,customfield_99984,customfield_77762
+OU Finance,customfield_13609,customfield_99983,customfield_77761
+Enduser Reporting Role - Investment,customfield_13610,customfield_99982,customfield_77760
+Company Code,customfield_13611,customfield_99981,customfield_77759
+Portal Folder,customfield_13612,customfield_99980,customfield_77758
+Name in Portal (DE),customfield_13613,customfield_99979,customfield_77757
+Report Name,customfield_13614,customfield_99978,customfield_77756
+Number of Transports,customfield_13800,customfield_99977,customfield_77755
+Transport Name,customfield_13704,customfield_99976,customfield_77754
+Name in Portal (EN),customfield_13801,customfield_99975,customfield_77753
+Name in Portal (IT),customfield_13802,customfield_99974,customfield_77752
+Name in Portal (FR),customfield_13803,customfield_99973,customfield_77751
+Name in Portal (ESP),customfield_13804,customfield_99972,customfield_77750
+Based on Reference User,customfield_13806,customfield_99971,customfield_77749
+Reference User,customfield_13807,customfield_99970,customfield_77748
+TextField (single line) for Service Desk 1,customfield_13705,customfield_99969,customfield_77747
+TextField (single line) for Service Desk 2,customfield_13706,customfield_99968,customfield_77746
+TextField (single line) for Service Desk 3,customfield_13708,customfield_99967,customfield_77745
+TextField (single line) for Service Desk 4,customfield_13707,customfield_99966,customfield_77744
+TextField (single line) for Service Desk 5,customfield_13900,customfield_99965,customfield_77743
+TextField (single line) for Service Desk 6,customfield_13901,customfield_99964,customfield_77742
+TextField (single line) for Service Desk 7,customfield_13902,customfield_99963,customfield_77741
+TextField (single line) for Service Desk 8,customfield_13903,customfield_99962,customfield_77740
+TextField (single line) for Service Desk 9,customfield_13904,customfield_99961,customfield_77739
+TextField (single line) for Service Desk 10,customfield_13905,customfield_99960,customfield_77738
+TextField (single line) for Service Desk 11,customfield_13906,customfield_99959,customfield_77737
+TextField (single line) for Service Desk 12,customfield_13907,customfield_99958,customfield_77736
+TextField (single line) for Service Desk 13,customfield_13908,customfield_99957,customfield_77735
+TextField (single line) for Service Desk 14,customfield_13909,customfield_99956,customfield_77734
+TextField (single line) for Service Desk 15,customfield_13910,customfield_99955,customfield_77733
+TextField (single line) for Service Desk 16,customfield_13911,customfield_99954,customfield_77732
+TextField (single line) for Service Desk 17,customfield_13912,customfield_99953,customfield_77731
+TextField (single line) for Service Desk 18,customfield_13913,customfield_99952,customfield_77730
+JS_CSAP_Set_Summary,customfield_13926,customfield_99951,customfield_77729
+JS_Hide_Native_JIRA,customfield_13929,customfield_99950,customfield_77728
+JS_CSAP_Set_Native_JIRA,customfield_13928,customfield_99949,customfield_77727
+JS_Hide_Leading_Delivery_Officer,customfield_13930,customfield_99948,customfield_77726
+JS_Hide_Assigned_Skillgroups,customfield_13931,customfield_99947,customfield_77725
+JS_Hide_Allocated_Person,customfield_13932,customfield_99946,customfield_77724
+JS_Hide_Starttermin_Umsetzung,customfield_13933,customfield_99945,customfield_77723
+JS_Hide_Due_Date,customfield_13934,customfield_99944,customfield_77722
+JS_Hide_Original_Estimate,customfield_13935,customfield_99943,customfield_77721
+JS_Hide_Remaining_Estimate,customfield_13936,customfield_99942,customfield_77720
+BO Transport Deadline,customfield_13400,customfield_99941,customfield_77719
+Module Area,customfield_13602,customfield_99940,customfield_77718
+BI Application,customfield_13615,customfield_99939,customfield_77717
+BI Change Type,customfield_13700,customfield_99938,customfield_77716
+Business Engineer,customfield_13701,customfield_99937,customfield_77715
+Affected Products,customfield_13808,customfield_99936,customfield_77714
+Affected Field,customfield_13809,customfield_99935,customfield_77713
+Business Prio,customfield_13914,customfield_99934,customfield_77712
+CRM Role(s),customfield_13917,customfield_99933,customfield_77711
+CRM Object(s),customfield_13918,customfield_99932,customfield_77710
