@@ -92,4 +92,5 @@ var Main = React.createClass({
   }
 });
 
+// # export for use elsewhere
 module.exports = Main;

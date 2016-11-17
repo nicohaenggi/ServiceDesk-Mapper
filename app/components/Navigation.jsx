@@ -22,4 +22,5 @@ var Navigation = (props) => {
   );
 };
 
+// # export for use elsewhere
 module.exports = Navigation;

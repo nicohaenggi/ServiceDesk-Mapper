@@ -112,4 +112,5 @@ var CodeOutput = React.createClass({
   }
 });
 
+// # export for use elsewhere
 module.exports = CodeOutput;
