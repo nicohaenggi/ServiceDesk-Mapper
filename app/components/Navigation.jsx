@@ -1,5 +1,10 @@
 var React = require('react');
 
+/** ## navigation component
+* this component consists only of a render function, thus containing no logic
+*
+* @param {Object} props the props passed on by the parent component
+*/
 var Navigation = (props) => {
   return(
     <div className="top-bar">
@@ -10,7 +15,7 @@ var Navigation = (props) => {
       </div>
       <div className="top-bar-right">
         <ul className="menu">
-          <li className="menu-text">created by <a href="http://nicohaenggi.com" target="_blank">Nico Hänggi</a></li>
+          <li className="menu-text">ServiceDesk Mapper</li>
         </ul>
       </div>
     </div>
