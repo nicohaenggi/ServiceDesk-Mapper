@@ -8,14 +8,21 @@ var CodeOutput = React.createClass({
   * destination environment using the mapping file
   */
   translateCode: function() {
-    var {originEnvironment, destinationEnvironment, code} = this.props;
-    this.props.customFields.forEach((customField) => {
-      if(!!customField[originEnvironment] && !!customField[destinationEnvironment]) {
-        var fieldRegex = new RegExp(customField[originEnvironment], 'g')
-        code = code.replace(fieldRegex, customField[destinationEnvironment]);
-      }
+    var {originEnvironment, destinationEnvironment, code, customFields} = this.props;
+    var mappedCode = code.replace(/((^.*)=|^(.+)$|%%(.*?)%%|#(.*?)\s)/gm, (match, m1, m2, m3, m4, m5) => {
+      var matchedString = m2 || m3 || m4 || m5 || m6;
+      match = match.replace(matchedString, () => {
+        var replaceString = matchedString;
+        customFields.forEach((field) => {
+          if(field[originEnvironment] === matchedString && !!field[destinationEnvironment]) {
+            replaceString = field[destinationEnvironment];
+          }
+        });
+        return replaceString;
+      });
+      return match;
     });
-    return code;
+    return mappedCode;
   },
   /** ## missing fields
   *
@@ -23,21 +30,19 @@ var CodeOutput = React.createClass({
   * or are not even present in the csv file
   */
   findMissingFields: function() {
-    var {originEnvironment, destinationEnvironment, code} = this.props;
-    this.props.customFields.forEach((customField) => {
-      if(!!customField[originEnvironment] && !!customField[destinationEnvironment]) {
-        var fieldRegex = new RegExp(customField[originEnvironment], 'g')
-        code = code.replace(fieldRegex, "");
-      }
+    var {originEnvironment, destinationEnvironment, code, customFields} = this.props;
+    var results = [];
+    var mappedCode = code.replace(/((^.*)=|^(.+)$|%%(.*?)%%|#(.*?)\s)/gm, (match, m1, m2, m3, m4, m5) => {
+      var matchedString = m2 || m3 || m4 || m5 || m6;
+      var replaced = false;
+      customFields.forEach((field) => {
+        if(field[originEnvironment] === matchedString && !!field[destinationEnvironment]) {
+          replaced = true;
+        }
+      });
+      if (!replaced) results.push(matchedString);
     });
-    var re = /(customfield_\d{5})/g;
-    var results = new Array();
-    var result = re.exec(code)
-    while (result){
-      results.push(result[1]);
-      result = re.exec(code);
-    }
-    return Array.from(new Set(results));;
+    return Array.from(new Set(results));
   },
   /** ## render function
   *

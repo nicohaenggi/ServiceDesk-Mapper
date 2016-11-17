@@ -23,6 +23,7 @@ var Options = React.createClass({
             <option value="devl">DEVL</option>
             <option value="intg">INTG</option>
             <option value="prod">PROD</option>
+            <option value="name">NAME</option>
           </select>
         </div>
         <div>
