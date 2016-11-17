@@ -1,33 +1,12 @@
 var React = require('react');
 var CopyToClipboard = require('react-copy-to-clipboard');
 
-/*
-description
-customfield_13805
-customfield_13302
-customfield_13302
-customfield_13302
-customfield_13405
-customfield_13405
-customfield_13404
-customfield_13614
-customfield_13405
-customfield_13301
-customfield_13202
-customfield_13203
-customfield_13302
-customfield_12312=CHE_SKILL_CSAP_BI_DELIVERY
-customfield_12314=nicht relevant
-customfield_12315=gar nicht
-customfield_11931=CH00HIO
-customfield_11601=CP00RDF
-customfield_10826=#created -100h
-duedate=#created +100h
-timeoriginalestimate=900
-timeestimate=900
-*/
-
 var CodeOutput = React.createClass({
+  /** ## code mapping
+  *
+  * translates the code from the origin environment to the selected
+  * destination environment using the mapping file
+  */
   translateCode: function() {
     var {originEnvironment, destinationEnvironment, code} = this.props;
     this.props.customFields.forEach((customField) => {
@@ -38,6 +17,11 @@ var CodeOutput = React.createClass({
     });
     return code;
   },
+  /** ## missing fields
+  *
+  * finds all the fields that either have no associated value in the csv
+  * or are not even present in the csv file
+  */
   findMissingFields: function() {
     var {originEnvironment, destinationEnvironment, code} = this.props;
     this.props.customFields.forEach((customField) => {
@@ -55,11 +39,19 @@ var CodeOutput = React.createClass({
     }
     return Array.from(new Set(results));;
   },
+  /** ## render function
+  *
+  * called whenever react renders the component; e.g. when props are updated
+  */
   render: function () {
     var {originEnvironment, destinationEnvironment, code} = this.props;
     var mappedCode = this.translateCode();
     var missingFields = this.findMissingFields();
 
+    /** ## missing fields
+    *
+    * renders all the missing fields, that couldn't be found in the mapping-file (.csv)
+    */
     var renderMissingFields = () => {
       if (missingFields.length > 0) {
         return (
@@ -75,11 +67,21 @@ var CodeOutput = React.createClass({
       }
     }
 
+    /** ## render output
+    *
+    * renders the output
+    */
     var renderOutput = () => {
       if(!originEnvironment || !destinationEnvironment) {
         return (
           <div className="block warning">
             please select an origin and destination environment first
+          </div>
+        );
+      } else if(originEnvironment === destinationEnvironment){
+        return (
+          <div className="block warning">
+            please select a different origin and destination environment first
           </div>
         );
       } else if(!!mappedCode){
