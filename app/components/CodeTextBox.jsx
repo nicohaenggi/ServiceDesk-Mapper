@@ -1,9 +1,18 @@
 var React = require('react');
 
 var CodeTextBox = React.createClass({
+  /** ## code input changed
+  * called when the code input was updated, deleted or removed
+  *
+  * @param {event} e event
+  */
   onCodeChange(e) {
     this.props.onCodeChange(e.target.value);
   },
+  /** ## render function
+  *
+  * called whenever react renders the component; e.g. when props are updated
+  */
   render() {
     return (
       <div className="small-12 code-text-box">
@@ -14,4 +23,5 @@ var CodeTextBox = React.createClass({
   }
 });
 
+// # export for use elsewhere
 module.exports = CodeTextBox;
