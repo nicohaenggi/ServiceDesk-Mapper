@@ -1,12 +1,16 @@
+// # application bootup
+// core component of the application; responsible for the application bootup
+
+// # import dependencies
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
 
-// ## Load CSS
+// ## load scss
 require('style!css!sass!applicationStyles');
 
-// ## Render Main Component
+// ## render main app component
 ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={Main}></Route>

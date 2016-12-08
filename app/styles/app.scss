@@ -1,3 +1,6 @@
+// # main SCSS
+// main SCSS file where all the components are imported
+
 // ## import variables
 @import "base/variables";
 
@@ -6,7 +9,7 @@
 @import "foundation";
 @include foundation-everything;
 
-// ## import components
+// ## import individual components
 @import "components/navigation";
 @import "components/page-title";
 @import "components/code-text-box";

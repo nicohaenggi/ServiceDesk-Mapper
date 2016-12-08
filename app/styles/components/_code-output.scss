@@ -4,43 +4,37 @@
   h4 {
     margin-top: 20px;
   }
-
   .block {
-    background-color: #efefef;
+    background-color: $output-block-color;
     padding: 20px;
     white-space: pre-wrap;
   }
-
   .fields {
     font-weight: 400;
     padding-bottom: 1px;
     font-size: 14px;
   }
-
   .warning {
-    background-color: #ff6868;
+    background-color: $warning-color;
     color: white;
     font-weight: 700;
 
   }
-
   .info {
-    background-color: #ffb15e;
+    background-color: $info-color;
     color: white;
     font-weight: 700;
   }
-
   .clipboard {
-  	background-color:#3ca7ec;
+  	background-color: $clipboard-color;
   	display:inline-block;
   	cursor:pointer;
-  	color:#ffffff;
+  	color: white;
   	padding:7px 20px;
   	text-decoration:none;
     text-align: center;
   }
   .clipboard:hover {
-  	background-color:#1977b5;
+  	background-color: $clipboard-color-dark;
   }
-
 }
