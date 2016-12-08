@@ -6,6 +6,7 @@ var Main = require('Main');
 // ## Load CSS
 require('style!css!sass!applicationStyles');
 
+// ## Render Main Component
 ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={Main}></Route>

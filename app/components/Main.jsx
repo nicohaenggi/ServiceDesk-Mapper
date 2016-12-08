@@ -30,6 +30,7 @@ var Main = React.createClass({
     Papa.parse("customfields.csv", {
     	download: true,
       header: true,
+      encoding: "iso-8859-1", // almost equivalent to ANSI
     	complete: (results) => {
         var array = results.data.map((obj) => {
           return {
@@ -39,6 +40,7 @@ var Main = React.createClass({
             "prod": obj.PROD
           }
         });
+        console.log(array);
         this.setState( { customFields: array } );
     	}
     });
