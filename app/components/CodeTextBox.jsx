@@ -1,5 +1,10 @@
+// # code editor component
+// code editor (left-hand side) react content, allowing the user to input his automation rule
+
+// ## import dependencies
 var React = require('react');
 
+// ## create code editor react class
 var CodeTextBox = React.createClass({
   /** ## code input changed
   * called when the code input was updated, deleted or removed
@@ -10,8 +15,8 @@ var CodeTextBox = React.createClass({
     this.props.onCodeChange(e.target.value);
   },
   /** ## render function
-  *
   * called whenever react renders the component; e.g. when props are updated
+  *
   */
   render() {
     return (
@@ -23,5 +28,5 @@ var CodeTextBox = React.createClass({
   }
 });
 
-// # export for use elsewhere
+// ## export for use elsewhere
 module.exports = CodeTextBox;

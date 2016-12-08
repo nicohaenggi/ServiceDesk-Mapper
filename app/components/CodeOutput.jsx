@@ -1,11 +1,16 @@
+// # code output component
+// output generated the output block (right-hand side) and does the required mapping
+
+// ## import dependencies
 var React = require('react');
 var CopyToClipboard = require('react-copy-to-clipboard');
 
+// ## create output block react class
 var CodeOutput = React.createClass({
   /** ## code mapping
-  *
   * translates the code from the origin environment to the selected
   * destination environment using the mapping file
+  *
   */
   translateCode: function() {
     var {originEnvironment, destinationEnvironment, code, customFields} = this.props;
@@ -25,9 +30,9 @@ var CodeOutput = React.createClass({
     return mappedCode;
   },
   /** ## missing fields
-  *
   * finds all the fields that either have no associated value in the csv
   * or are not even present in the csv file
+  *
   */
   findMissingFields: function() {
     var {originEnvironment, destinationEnvironment, code, customFields} = this.props;
@@ -45,8 +50,8 @@ var CodeOutput = React.createClass({
     return Array.from(new Set(results));
   },
   /** ## render function
-  *
   * called whenever react renders the component; e.g. when props are updated
+  *
   */
   render: function () {
     var {originEnvironment, destinationEnvironment, code} = this.props;
@@ -54,8 +59,8 @@ var CodeOutput = React.createClass({
     var missingFields = this.findMissingFields();
 
     /** ## missing fields
-    *
     * renders all the missing fields, that couldn't be found in the mapping-file (.csv)
+    *
     */
     var renderMissingFields = () => {
       if (missingFields.length > 0) {
@@ -73,8 +78,8 @@ var CodeOutput = React.createClass({
     }
 
     /** ## render output
-    *
     * renders the output
+    *
     */
     var renderOutput = () => {
       if(!originEnvironment || !destinationEnvironment) {
@@ -119,5 +124,5 @@ var CodeOutput = React.createClass({
   }
 });
 
-// # export for use elsewhere
+// ## export for use elsewhere
 module.exports = CodeOutput;

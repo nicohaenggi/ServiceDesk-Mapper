@@ -1,3 +1,7 @@
+// # main component
+// main React.js component
+
+// ## import dependencies
 var React = require('react');
 var Navigation = require('Navigation');
 var CodeTextBox = require('CodeTextBox');
@@ -5,11 +9,12 @@ var CodeOutput = require('CodeOutput');
 var Options = require('Options');
 var Papa  = require('papaparse');
 
+// ## create main react class
 var Main = React.createClass({
 
   /** ## inital react state
-  *
   * returns the initial state
+  *
   */
   getInitialState: function() {
     return {
@@ -20,8 +25,8 @@ var Main = React.createClass({
     }
   },
   /** ## component mounted
-  *
   * called when the react component got mounted
+  *
   */
   componentDidMount: function() {
     // ### .csv parsing
@@ -30,7 +35,7 @@ var Main = React.createClass({
     Papa.parse("customfields.csv", {
     	download: true,
       header: true,
-      encoding: "iso-8859-1", // almost equivalent to ANSI
+      encoding: "iso-8859-1", // equivalent to ANSI
     	complete: (results) => {
         var array = results.data.map((obj) => {
           return {
@@ -40,7 +45,6 @@ var Main = React.createClass({
             "prod": obj.PROD
           }
         });
-        console.log(array);
         this.setState( { customFields: array } );
     	}
     });
@@ -53,11 +57,11 @@ var Main = React.createClass({
   */
   handleStatusChange: function(type, newStatus) {
     if(type === "origin") {
-      // ## sets state and localStorage in order to retrieve settings later
+      // ### sets state and localStorage in order to retrieve settings later
       this.setState({ originEnvironment: newStatus });
       localStorage.setItem('originEnvironment', newStatus);
     } else if(type === "destination") {
-      // ## sets state and localStorage in order to retrieve settings later
+      // ### sets state and localStorage in order to retrieve settings later
       this.setState({ destinationEnvironment: newStatus });
       localStorage.setItem('destinationEnvironment', newStatus);
     }
@@ -71,12 +75,11 @@ var Main = React.createClass({
     this.setState({ code: newStatus });
   },
   /** ## render function
-  *
   * called whenever react renders the component; e.g. when state is updated
+  *
   */
   render: function() {
     var {originEnvironment, destinationEnvironment, code, customFields} = this.state;
-
     return (
       <div>
         <Navigation/>
@@ -94,5 +97,5 @@ var Main = React.createClass({
   }
 });
 
-// # export for use elsewhere
+// ## export for use elsewhere
 module.exports = Main;

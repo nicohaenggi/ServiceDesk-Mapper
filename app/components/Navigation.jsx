@@ -1,3 +1,7 @@
+// # navigation component
+// navigation component displaying the nav
+
+// ## import dependencies
 var React = require('react');
 
 /** ## navigation component
@@ -22,5 +26,5 @@ var Navigation = (props) => {
   );
 };
 
-// # export for use elsewhere
+// ## export for use elsewhere
 module.exports = Navigation;

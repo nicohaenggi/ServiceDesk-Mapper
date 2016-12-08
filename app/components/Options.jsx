@@ -1,5 +1,11 @@
+// # options component
+// used for displaying the different options to be mapped to
+// (e.g origin environment and destination environment)
+
+// ## import dependencies
 var React = require('react');
 
+// ## create options react class
 var Options = React.createClass({
   /** ## settings changed
   * called when a settings change occurs (e.g. when Origin or Destination is changed)
@@ -11,8 +17,8 @@ var Options = React.createClass({
     this.props.onStatusChange(type, e.target.value);
   },
   /** ## render function
-  *
   * called whenever react renders the component; e.g. when state is updated
+  *
   */
   render() {
     return (
@@ -40,5 +46,5 @@ var Options = React.createClass({
   }
 });
 
-// # export for use elsewhere
+// ## export for use elsewhere
 module.exports = Options;

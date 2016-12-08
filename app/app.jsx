@@ -1,7 +1,7 @@
 // # application bootup
 // core component of the application; responsible for the application bootup
 
-// # import dependencies
+// ## import dependencies
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
